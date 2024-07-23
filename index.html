@@ -47,5 +47,17 @@
     </footer>
 </body>
 </html>
+<script>
+    function setActiveSection(sectionId) {
+        var sections = document.querySelectorAll('.section');
+        sections.forEach(section => {
+            section.classList.remove('active');
+        });
+        var activeSection = document.getElementById(sectionId);
+        if (activeSection) {
+            activeSection.classList.add('active');
+        }
+    }
+    </script>
 
     
