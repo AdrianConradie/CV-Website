@@ -51,11 +51,12 @@
     function setActiveSection(sectionId) {
         var sections = document.querySelectorAll('.section');
         sections.forEach(section => {
-            section.style.display = 'none'; // Hide all sections
+            if (section.id === sectionId) {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
         });
-        var activeSection = document.getElementById(sectionId);
-        if (activeSection) {
-            activeSection.style.display = 'block'; // Show the selec ted section
-        }
     }
-    </script>  
+    </script>
+    
